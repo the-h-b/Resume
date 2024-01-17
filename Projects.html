@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        /*text-align: center;*/
+        margin: 0;
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        background-color: #333; /* Dark background color for the navigation bar */
+        padding: 10px 0;
+        position: relative;
+        z-index: 1000; /* Higher z-index to keep the navigation bar on top */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff; 
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    nav a:hover {
+        color: #b5e80c; /* Hover */
+    }
+</style>
+</head>
+<body>
+    <div id="link" class="navigation">    
+        <nav>
+            <ul>
+                <li><a href="http://127.0.0.1:5500/index.html#" target="_blank">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/about.html" target="_blank">About</a></li>
+                <li><a href="http://127.0.0.1:5500/Projects.html" >Projects</a></li>
+                <li><a href="http://127.0.0.1:5500/contact.html" target="_blank">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/termofuse.html" target="_blank">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

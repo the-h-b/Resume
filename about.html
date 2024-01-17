@@ -48,12 +48,33 @@
             color: #4caf50; /* Green color */
             transition: color 0.5s ease-in-out;
             font-family: 'Arial', 'cursive'; /* Initial font */
-
-            
         }
 
         #staticText {
             font-weight: bold;
+        }
+
+        #myImageContainer {
+            width: 200px; /* Set the width of the square */
+            height: 200px; /* Set the height of the square */
+            overflow: hidden; /* Hide the overflow to make it a square */
+            border-radius: 50%; /* Make it a circular container */
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #myImage {
+            width: 100%; /* Make the image fill the square container */
+            height: auto;
+            border-radius: 50%; /* Ensure the image remains circular */
+        }
+
+        #paragraphContainer {
+            background-color: #f0f0f0; /* Light gray background for the box */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
         }
     </style>
     <!-- Link to Google Fonts -->
@@ -67,11 +88,11 @@
     <div id="link" class="navigation">    
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="E:\resume\termsofuse.html" target="_blank">Terms of Use</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html#" target="_blank">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/about.html" >About</a></li>
+                <li><a href="http://127.0.0.1:5500/Projects.html" target="_blank">Projects</a></li>
+                <li><a href="http://127.0.0.1:5500/contact.html" target="_blank">Contact</a></li>
+                <li><a href="http://127.0.0.1:5500/termofuse.html" target="_blank">Terms of Use</a></li>
             </ul>
         </nav>
     </div>
@@ -80,7 +101,7 @@
 
     <script>
         // Array of roles to display
-        var roles = ["Data Analyst", "Web Developer", "Designer", "Product Manager", "AI Engineer"];
+        var roles = ["Data Analyst", "Web Developer", "Coder", "Engineer", "AI Engineer"];
         var fonts = ["'Roboto', sans-serif", "'Open Sans', sans-serif", "'Montserrat', sans-serif", "'Dancing Script', cursive", "'Ubuntu', sans-serif"];
         var currentIndex = 0;
 
@@ -96,7 +117,7 @@
             roleDisplay.style.fontFamily = fonts[currentIndex % fonts.length];
 
             // Display the static text "I'm" and the current role
-            roleDisplay.innerHTML = "<span id='staticText'>I'm</span> a " + roles[currentIndex];
+            roleDisplay.innerHTML = "<span id='staticText'>I'm</span>  " + roles[currentIndex];
 
             // Increment the index for the next role
             currentIndex = (currentIndex + 1) % roles.length;
@@ -108,5 +129,13 @@
         // Call the function to start the role display
         updateRoleDisplay();
     </script>
+    <div id="myImageContainer">
+        <img id="myImage" src="https://media.licdn.com/dms/image/D4E03AQGIneMmIhKPNA/profile-displayphoto-shrink_800_800/0/1663954993783?e=2147483647&v=beta&t=qXjuuglwxymM2AGDN_IfdyMvEMlMXtWU2g1XLLKITWk" alt="Harsh Bhutra">
+    </div>
+
+    <div id="paragraphContainer">
+        <p>A tenacious Electrical and Communication engineering student with a strong foundation in the core subjects of Computer Science, like DSA, ML, C/Cpp, Operating Systems, etc. A quick learner and problem solver with a goal oriented towards optimization and green technology. The critical thinking just adds a cherry on top. Loves to speak in public and anchor events. Open-source contributor and a gracious and adaptable team player with great work ethic.</p>
+    </div>
+
 </body>
 </html>
