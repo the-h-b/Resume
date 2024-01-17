@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume (Harsh Bhutra)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezJs4mTgIaDK8MwVd9VdCpIjda6HWQ9f9a41M+K+62FZLlXWcWhOhiAR18f5xKs9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-ma2vDZSgIn9CU6f0SwxI1CukI7iDDvWzWsxcWzUW3+3awQiLxM63J2NopSd+1tf/foEqeYOkOAOIYxBjL4EmnWg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            overflow: scroll; /* scroll scrollbars caused by particles.js */
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #333; /* Dark background color for the navigation bar */
+            padding: 10px 0;
+            position: relative;
+            z-index: 1000; /* Higher z-index to keep the navigation bar on top */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff; 
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #b5e80c; /* Hover */
+        }
+
+        .containers {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            box-sizing: border-box;
+            color: #090000;
+            z-index: 999; /* Ensure the containers are on top of the particles */
+            position: relative;
+        }
+
+        .service-wrapper {
+            flex: 1;
+            transition: transform 0.3s ease-in-out;
+            max-width: 300px; /* Set a maximum width for better alignment */
+        }
+
+        .service {
+            text-align: center;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .card {
+            flex: 1;
+            padding: 20px;
+            border: 1px solid #1c0b0b;
+            border-radius: 8px;
+            margin: 0 10px;
+        }
+
+        /* Scale effect on hover */
+        .service-wrapper:hover {
+            transform: scale(1.25);
+            color: #090000; /* Hover */
+        }
+
+        .circle-button-container {
+            position: absolute;
+            bottom: 20px; /* Adjust the top distance as needed */
+            right: 620px; /* Adjust the right distance as needed */
+            display: flex;
+            justify-content: center;
+        }
+        
+        .circle-button {
+            width: 50px;
+            height: 50px;
+            background-color: #f6f6f6; /* Off white */
+            border-radius: 50%;
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        
+        .circle-button:hover {
+            background-color: #e0e0e0; /* Hover color */
+            transform: scale(1.2);
+        }
+        
+        .circle-button i {
+            color: #333; /* Icon color */
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div id="link" class="navigation">    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="E:\resume\termsofuse.html" target="_blank">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="containers">
+        <div class="service-wrapper">
+            <div class="service">
+                <h1>Our Service 1</h1>
+                <div class="cards">
+                    <div class="card">
+                        <i class="fa fa-cogs"></i> <!-- Placeholder icon, replace with your icon -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa minus esse repellendus repudiandae eius fugit, accusamus dolor doloribus consequatur distinctio sed vel nam et officiis hic rem aliquam eveniet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-wrapper">
+            <div class="service">
+                <h1>Our Service 2</h1>
+                <div class="cards">
+                    <div class="card">
+                        <i class="fa fa-cogs"></i> <!-- Placeholder icon, replace with your icon -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa minus esse repellendus repudiandae eius fugit, accusamus dolor doloribus consequatur distinctio sed vel nam et officiis hic rem aliquam eveniet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-wrapper">
+            <div class="service">
+                <h1>Our Service 3</h1>
+                <div class="cards">
+                    <div class="card">
+                        <i class="fa fa-cogs"></i> <!-- Placeholder icon, replace with your icon -->
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa minus esse repellendus repudiandae eius fugit, accusamus dolor doloribus consequatur distinctio sed vel nam et officiis hic rem aliquam eveniet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="service-wrapper">
+            <div class="service">
+                <h1>Our Service 4</h1>
+                <div class="cards">
+                  <div class="card">
+                      <i class="fa fa-cogs"></i> <!-- Placeholder icon, replace with your icon -->
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab ipsa minus esse repellendus repudiandae eius fugit, accusamus dolor doloribus consequatur distinctio sed vel nam et officiis hic rem aliquam eveniet.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="circle-button-container">
+      <div class="circle-button"><i class="fa fa-github" style="font-size:36px;"></i></div>
+      <div class="circle-button"><i class="fa fa-twitter" style="font-size:36px;"></i></div>
+      <div class="circle-button"><i class="fa fa-envelope" style="font-size:36px"></i></div>
+      <div class="circle-button"><i class="fa fa-linkedin" style="font-size:36px"></i></div>
+  </div>
+ 
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0px;
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #333; /* Dark background color for the navigation bar */
+            padding: 10px 0;
+            position: relative;
+            z-index: 1000; /* Higher z-index to keep the navigation bar on top */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff; 
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #b5e80c; /* Hover */
+        }
+
+        form {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .success-message {
+            color: #4caf50;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .error-message {
+            color: #ff0000;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="link" class="navigation">    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="E:\resume\termsofuse.html" target="_blank">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <form action="#" method="post" id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" id="contactNumber" name="contactNumber" pattern="[0-9]{10}" required>
+        <small>Enter a 10-digit phone number.</small>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="remarks">Remarks:</label>
+        <textarea id="remarks" name="remarks" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+
+        <div id="successMessage" class="success-message" style="display: none;">Form submitted successfully!</div>
+        <div id="errorMessage" class="error-message" style="display: none;">Error submitting form. Please try again.</div>
+
+    </form>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("contactForm");
+            var successMessage = document.getElementById("successMessage");
+            var errorMessage = document.getElementById("errorMessage");
+
+            // Simulate form submission (you can replace this with an actual form submission logic)
+            var isValid = form.checkValidity();
+            if (isValid) {
+                successMessage.style.display = "block";
+                errorMessage.style.display = "none";
+                // Add additional logic for form submission to your backend
+            } else {
+                successMessage.style.display = "none";
+                errorMessage.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>

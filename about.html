@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Role Display</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #333; /* Dark background color for the navigation bar */
+            padding: 10px 0;
+            position: relative;
+            z-index: 1000; /* Higher z-index to keep the navigation bar on top */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff; 
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #b5e80c; /* Hover */
+        }
+
+        #roleDisplay {
+            font-size: 100px;
+            top: 300px;
+            color: #4caf50; /* Green color */
+            transition: color 0.5s ease-in-out;
+            font-family: 'Arial', 'cursive'; /* Initial font */
+
+            
+        }
+
+        #staticText {
+            font-weight: bold;
+        }
+    </style>
+    <!-- Link to Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap">
+</head>
+<body>
+    <div id="link" class="navigation">    
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="E:\resume\termsofuse.html" target="_blank">Terms of Use</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="roleDisplay"><span id="staticText">I'm</span> a</div>
+
+    <script>
+        // Array of roles to display
+        var roles = ["Data Analyst", "Web Developer", "Designer", "Product Manager", "AI Engineer"];
+        var fonts = ["'Roboto', sans-serif", "'Open Sans', sans-serif", "'Montserrat', sans-serif", "'Dancing Script', cursive", "'Ubuntu', sans-serif"];
+        var currentIndex = 0;
+
+        // Function to update the role display
+        function updateRoleDisplay() {
+            var roleDisplay = document.getElementById("roleDisplay");
+
+            // Change color for each role
+            var colors = ["#4caf50", "#2196F3", "#FF9800", "#E91E63", "#673AB7"];
+            roleDisplay.style.color = colors[currentIndex % colors.length];
+
+            // Change font for each role
+            roleDisplay.style.fontFamily = fonts[currentIndex % fonts.length];
+
+            // Display the static text "I'm" and the current role
+            roleDisplay.innerHTML = "<span id='staticText'>I'm</span> a " + roles[currentIndex];
+
+            // Increment the index for the next role
+            currentIndex = (currentIndex + 1) % roles.length;
+
+            // Set a timeout to call the function again after 2 seconds (2000 milliseconds)
+            setTimeout(updateRoleDisplay, 2000);
+        }
+
+        // Call the function to start the role display
+        updateRoleDisplay();
+    </script>
+</body>
+</html>
